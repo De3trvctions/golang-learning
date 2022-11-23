@@ -17,11 +17,20 @@ func main() {
 	fmt.Printf("conferenceTickets is %T, remaintingTickets is %T, conferenceName is %T \n", conferenceTickets, remaindingTickets, conferenceName)
 
 	// Declaring data type
-	var userName string
+	var firstName string
+	var lastName string
+	var email string
 	var userTickets int
 
-	userName = "Alex"
-	userTickets = 2
-	fmt.Printf("User %v booked %v tickets \n", userName, userTickets)
+	fmt.Println("Enter your first name:")
+	fmt.Scan(&firstName)
+	fmt.Println("Enter your last name:")
+	fmt.Scan(&lastName)
+	fmt.Println("Enter your email:")
+	fmt.Scan(&email)
+	fmt.Println("Enter number of tickets email:")
+	fmt.Scan(&userTickets)
+
+	fmt.Printf("Thankiu %v %v for booking %v ticket. You will receive confirmation at %v.", firstName, lastName, email, userTickets)
 
 }
