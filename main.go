@@ -20,7 +20,7 @@ func main() {
 	var firstName string
 	var lastName string
 	var email string
-	var userTickets int
+	var userTickets uint
 
 	fmt.Println("Enter your first name:")
 	fmt.Scan(&firstName)
@@ -28,9 +28,11 @@ func main() {
 	fmt.Scan(&lastName)
 	fmt.Println("Enter your email:")
 	fmt.Scan(&email)
-	fmt.Println("Enter number of tickets email:")
+	fmt.Println("Enter number of tickets:")
 	fmt.Scan(&userTickets)
 
-	fmt.Printf("Thankiu %v %v for booking %v ticket. You will receive confirmation at %v.", firstName, lastName, email, userTickets)
+	remaindingTickets = remaindingTickets - userTickets
 
+	fmt.Printf("Thankiu %v %v for booking %v ticket. You will receive confirmation at %v.\n", firstName, lastName, email, userTickets)
+	fmt.Printf("%v tickets remaining for %v\n", remaindingTickets, conferenceName)
 }
